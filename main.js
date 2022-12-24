@@ -99,10 +99,7 @@ function generatePassword(lowercase, uppercase, number, symbol, characterLength)
 	// valid password is displayed in green text and also logged in the console
     result.style.color = "green";
    	console.log("Congratulations! Your password is: " + password);
-	// takes the unshuffled password (password) with the correct number of characters, and shuffles them so that it is not alternating based on character types. ex of unshuffled password w/ all four character types would alternate in the order: lower, upper, number, symbol, repeat.
-
-
-
+	
 	return password;
 }}
 
