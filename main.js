@@ -25,9 +25,9 @@ function generateThePassword(){
 
 // declaring variables as booleans that are true or false based on responses to the window alerts
 	var containsLower = confirm("Do you want to include lowercase letters?");
-	var containsUpper = confirm('do you want upper case?');
-	var containsNumber = confirm('do you want numbers ?');
-	var containsSymbol = confirm('do you want symbols?');
+	var containsUpper = confirm('Do you want to include uppercase letters?');
+	var containsNumber = confirm('Do you want to include numbers?');
+	var containsSymbol = confirm('Do you want to include symbols?');
 
 // console logging each var as true/false, and the character length of the password based on user response to prompts
 	console.log("The password contains lowercase: " + containsLower);	
@@ -36,7 +36,7 @@ function generateThePassword(){
 	console.log("The password contains symbols: " + containsSymbol);
 	console.log("The password character length is: " + characterLength);	
 
-// script that inputs value of password gernerating function in the text box
+// script that inputs value of password generating function in the text box
 	result.innerText = generatePassword(
 		containsLower, 
 		containsUpper, 
@@ -66,7 +66,7 @@ function generatePassword(lowercase, uppercase, number, symbol, characterLength)
 
 	// no character type was chosen. Cannot generate a password of any length if there is no character type criteria
 	if(characterTypesCount === 0) {
-		alert('Password not generated due to invalid character input. Try again but make sure to choose at least 1 of the following character types to be included in your password: Uppercase, Lowercase, Numbers, Symbols. ')
+		alert('Password not generated due to invalid character input. Try again, but make sure to choose at least 1 of the following character types to be included in your password: Uppercase, Lowercase, Numbers, Symbols. ')
         console.log('Password not generated due to invalid character input');
         result.style.color = "red";
 		return 'No password was generated due to missing character inputs. Please try again. The password must include at least one of the following: Uppercase, Lowercase, Numbers, Symbols.';
